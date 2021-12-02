@@ -1,3 +1,5 @@
 const root = document.getElementById("root");
-const span = React.createElement("span", {id: "sexy-span", style : {color:"red"}}, "Hello, I'm a span!");
-ReactDOM.render(span,root);
+const h3 = React.createElement("h3", {id:"title", onMouseEnter:() => console.log("mouse Enter!")}, "Hello, I'm a span!");
+const btn = React.createElement("button", {onClick:() => console.log("Clicked!")}, "Click me!");
+const container = React.createElement("div", null, [h3, btn]);
+ReactDOM.render(container,root);
