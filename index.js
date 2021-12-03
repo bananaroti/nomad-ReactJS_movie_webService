@@ -4,7 +4,8 @@ function App() {
 
   const [counter, setCounter] = React.useState(0);
   const countUp = () => {
-    setCounter(counter + 1);
+    // setCounter(counter + 1);
+    setCounter((current) => current +1);
   }
 
   return(
