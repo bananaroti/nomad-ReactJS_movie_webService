@@ -1,16 +1,16 @@
 const root = document.getElementById("root");
 
-const x = [1, 2, 3];
-const [a, b, c] = x;
-console.log(a);
-
 function App() {
-  // const data = React.useState(counter);
-  // console.log(data);
+
+  const [counter, setCounter] = React.useState(0);
+  const countUp = () => {
+    setCounter(counter + 1);
+  }
+
   return(
   <div>
-    <h3>Total clicks : 0</h3>
-    <button>Click me!</button>
+    <h3>Total clicks : {counter}</h3>
+    <button onClick={countUp}>Click me!</button>
   </div>
   )
 }
