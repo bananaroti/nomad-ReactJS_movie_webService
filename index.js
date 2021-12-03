@@ -1,35 +1,18 @@
 const root = document.getElementById("root");
 
-let counter = 0;
+const x = [1, 2, 3];
+const [a, b, c] = x;
+console.log(a);
 
-function countUp() {
-  counter = counter + 1;
-  Render();
-}
-function Render() {
-  ReactDOM.render(<Container/>,root);
-}
-
-// const Title = () => {
-//   <h3>Total Clicks : {counter}</h3>
-// }
-
-// const Button = ()=> (
-//   <button onClick={countUp}>Click me!</button>
-// )
-
-// const Container = ()=> (
-//   <div>
-//     <Title/>
-//     <Button/>
-//   </div>
-// )
-
-const Container = ()=> (
+function App() {
+  // const data = React.useState(counter);
+  // console.log(data);
+  return(
   <div>
-    <h3>Total clicks : {counter}</h3>
-    <button onClick={countUp}>Click me!</button>
+    <h3>Total clicks : 0</h3>
+    <button>Click me!</button>
   </div>
-)
+  )
+}
 
-ReactDOM.render(<Container/>, root);
+ReactDOM.render(<App/>, root);
