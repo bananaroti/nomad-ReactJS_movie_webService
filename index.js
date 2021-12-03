@@ -1,13 +1,10 @@
 const root = document.getElementById("root");
-const title = (
+const Title = ()=> (
   <h3 id="title" onMouseEnter={() => console.log("onMoused!")}>
     Hello, i'm title!
   </h3>
 );
-// const h3 = React.createElement("h3", {id:"title", onMouseEnter:() => console.log("mouse Enter!")}, "Hello, I'm a span!");
-
-// const btn = React.createElement("button", {onClick:() => console.log("Clicked!")}, "Click me!");
-const button = (
+const Button = ()=> (
   <button
     id="button"
     style={{ backgroundColor: "tomato" }}
@@ -16,5 +13,11 @@ const button = (
     Click me!
   </button>
 );
-const container = React.createElement("div", null, [title, button]);
-ReactDOM.render(container, root);
+
+const Container = ()=> (
+  <div>
+    <Title/>
+    <Button/>
+  </div>
+)
+ReactDOM.render(<Container/>, root);
