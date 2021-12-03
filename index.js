@@ -1,17 +1,13 @@
 const root = document.getElementById("root");
 
 function App() {
-
-  const [counter, setCounter] = React.useState(0);
-  const countUp = () => {
-    // setCounter(counter + 1);
-    setCounter((current) => current +1);
-  }
-
   return(
   <div>
-    <h3>Total clicks : {counter}</h3>
-    <button onClick={countUp}>Click me!</button>
+    <h1>Super Converter</h1>
+    <label for="minutes">Minutes</label>
+    <input id="minutes" placeholder="Minutes" type="number"></input>
+    <label for="hours">Hours</label>
+    <input id="hours" placeholder="Hours" type="number"></input>
   </div>
   )
 }
